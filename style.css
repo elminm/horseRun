@@ -5,6 +5,9 @@
 body {
     background-color: rebeccapurple;
 }
+html{
+    user-select: none;
+}
 .main {
     position: relative;
     height: 100vh;
@@ -53,4 +56,46 @@ body {
 }
 .btn-start.disabled{
     opacity: .5;
+    pointer-events: none;
+}
+
+.bet-container{
+    position: absolute;
+    left: 10px;
+    top: 450px;
+}
+select{
+    width: 200px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    background-color: rgb(0, 140, 255);
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    border-radius: 15px;
+}
+input{
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    outline: none;
+}
+.bet-btn{
+    padding: 10px 15px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: aquamarine;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.bet-btn:active{
+    background-color: blue;
+    color: #fff;
+}
+.wallet {
+    font-size: 24px;
+    color: #fff;
 }
