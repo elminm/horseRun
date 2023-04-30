@@ -28,6 +28,7 @@ function winner(winner){
  if(winner===selected){
     walletSpan.innerText = wallet + amount*2;
  }
+ amount = 0;
 }
 alert(`winner is ${winner}`)
 }
@@ -38,7 +39,7 @@ let run = new Audio('./run.mp3')
 audio.play();
 btn.classList.add('disabled')
 
-const timer = setInterval(() => {
+const timer = setInterval(function() {
 run.play()
 const horse1 = document.querySelector('.horse1')
 const horse2 = document.querySelector('.horse2')
@@ -48,7 +49,6 @@ let random2 = Math.random() * 3 + 1;
 let random3 = Math.random() * 3 + 1;
 if(i+200>divider.getBoundingClientRect().left) {
 run.pause()
-
 clearInterval(timer);
     i = 0;
     j = 0;
@@ -57,6 +57,7 @@ horse1.style.left = 0;
 horse2.style.left = 0;
 horse3.style.left =0;
 btn.classList.remove('disabled')
+
 winner('horse1')
 return
 }
